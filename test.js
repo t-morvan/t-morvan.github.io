@@ -1,10 +1,17 @@
 
-const marginLeft=50,
-      marginTop=50, 
-      width=500,
-      height=500,
-      font='Roboto Mono'
-      r=200;
+
+const width=window.innerWidth,    
+      height=window.innerHeight,
+      font='Roboto Mono';
+
+let size=Math.min(width,height);
+let margin=0.1*size; //margin for text
+let r1=size/2-margin/2;
+let r2=3*size/8-margin/2;
+let r3=size/4-margin/2;
+let top1=margin/2;
+let top2=r1-r2+margin/2;
+let top3=r1-r3+margin/2;
 
 test1= "Trois mille six cents fois par heure, la Seconde Chuchote: Souviens toi ! – Rapide, avec sa voix D\’insecte, Maintenant dit: Je suis Autrefois, Et j\’ai pompé ta vie avec ma trompe immonde!";
 test2= "Les minutes, mortel folâtre, sont des gangues Qu\’il ne faut pas lâcher sans en extraire l\’or !";
@@ -12,11 +19,11 @@ test3= "Tantôt sonnera l\’heure ... Où tout te dira : Meurs, vieux lâche ! 
       
 //Create the SVG
 var svg = d3.select("body").append("svg")
-            .attr("width", width)
-            .attr("height", height);
+            .attr("width", size)
+            .attr("height", size);
 
 
-function createClock(sentence,radius,left,top,hand,color){
+function createClock(sentence,radius,top,hand,color){
   words=sentence.split(' ').map(d => d+"  ");
   length=words.map(d=>d.length).reduce((a, b)=> a + b,0)
   let cumulativeSum = (sum => value => sum += (value))(0);
@@ -26,7 +33,7 @@ function createClock(sentence,radius,left,top,hand,color){
 
   let fontWidth= 2*Math.PI*radius/length;
   let fontSize= dichotomy(getTextWidth,fontWidth,fontWidth);
-  let circle=createCirclePath(left,top,radius);
+  let circle=createCirclePath(top,radius);
   let scale=createScale(sentence,hand);
 
   createSVG(words, cumsum,hand,fontSize,fontWidth,circle);
@@ -59,9 +66,9 @@ function createSVG(sentence, cumsum,hand,fontSize,fontWidth,circle){
       .attr("startOffset", (d,i)=> cumsum[i]*fontWidth+"px" );
 };
 
-createClock(test1,200,50,50,"Seconds","#be1e2d");
-createClock(test2,150,100,100,"Minutes","#21409a");
-createClock(test3,100,150,150,"Hours","	#ffde17");
+createClock(test1,r1,top1,"Seconds","#be1e2d");
+createClock(test2,r2,top2,"Minutes","#21409a");
+createClock(test3,r3,top3,"Hours","	#ffde17");
 
 function showTime(hand,color,scale){
   let d= new Date();
@@ -133,21 +140,6 @@ function dichotomy(fun, v,h){
 };
 
 
-function getTextWidth2(fontsize) {  
-  text = document.createElement("span"); 
-  document.body.appendChild(text); 
-  text.style.font = font; 
-  text.style.fontSize = fontsize + "px"; 
-  text.style.height = 'auto'; 
-  text.style.width = 'auto'; 
-  text.style.position = 'absolute'; 
-  text.style.whiteSpace = 'no-wrap'; 
-  text.innerHTML = 'h'; 
-  widthtxt = text.clientWidth; 
-  document.body.removeChild(text); 
-  return  widthtxt;
-};
-
 function getTextWidth(fontsize) { 
   
   inputText = "h"; 
@@ -159,13 +151,8 @@ function getTextWidth(fontsize) {
 } 
 
 
-
-function createCirclePath2(left,top,radius){
-  return ("M "+left+","+(top+radius)+" A "+radius+','+radius+ " 0 0,1 "+(2*radius+left)+","+(top+radius)+" A "+radius+','+radius+ " 0 0,1 "+left+","+(top+radius))
-};
-
-function createCirclePath(left,top,radius){
-  return ("M "+ (width/2)+","+top+" A "+radius+','+radius+ " 0 0,1 "+(width/2)+","+(2*radius+top)+" A "+radius+','+radius+ " 0 0,1 "+(width/2)+","+top)
+function createCirclePath(top,radius){
+  return ("M "+(size/2)+","+top+" A "+radius+','+radius+ " 0 0,1 "+(size/2)+","+(2*radius+top)+" A "+radius+','+radius+ " 0 0,1 "+(size/2)+","+top)
 };
 
 
