@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog</title>
+    <link>https://t-morvan.github.io/</link>
+    <description>Recent content on blog</description>
+    <image>
+      <url>https://t-morvan.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://t-morvan.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://t-morvan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>De la suppression des vols intérieurs</title>
+      <link>https://t-morvan.github.io/posts/my-second-post/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://t-morvan.github.io/posts/my-second-post/</guid>
+      <description>La convention citoyenne pour le climat proposait d&amp;rsquo;interdire les vols intérieurs dès lors qu&amp;rsquo;il existe une alternative en train en moins de 4h; la loi climat a finalement retenu une durée de 2h30 faisant passer de 18 à 5 les lignes impactées par la mesure. On propose ici une carte interactive qui permet d&amp;rsquo;explorer différents seuils et de visualiser les lignes affectées.
+  import {Runtime, Inspector} from &#34;https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js&#34;; import define from &#34;</description>
+    </item>
+    
+    <item>
+      <title>Horloge baudelairienne</title>
+      <link>https://t-morvan.github.io/posts/my-first-post/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://t-morvan.github.io/posts/my-first-post/</guid>
+      <description>L&amp;rsquo;horloge    </description>
+    </item>
+    
+  </channel>
+</rss>

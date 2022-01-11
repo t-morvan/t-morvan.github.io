@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on blog</title>
+    <link>https://t-morvan.github.io/tags/</link>
+    <description>Recent content in Tags on blog</description>
+    <image>
+      <url>https://t-morvan.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://t-morvan.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://t-morvan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>climat</title>
+      <link>https://t-morvan.github.io/tags/climat/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://t-morvan.github.io/tags/climat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open data</title>
+      <link>https://t-morvan.github.io/tags/open-data/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://t-morvan.github.io/tags/open-data/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
